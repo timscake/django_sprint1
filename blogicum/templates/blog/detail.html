@@ -1,0 +1,25 @@
+{% extends "blog/index.html" %}
+{% block content %}<title>{{ post.location }}.{{ post.date }} </title>{% endblock %}
+{% block content1 %}
+<main>
+  <div class="container py-5">
+    <article>
+      <ul>
+        <li>
+          Место: {{ post.location }}             
+        </li>
+        <li>
+          Дата: {{ post.date }}
+        </li>
+        <li>
+          Категория: <a href={{ post.category }}>{{ post.category }}</a>
+        </li>
+      </ul>         
+      <p>
+        {{ post.text|linebreaksbr }}
+      </p>          
+    </article>                
+  </div>
+</main>
+{% endblock %}
+    
